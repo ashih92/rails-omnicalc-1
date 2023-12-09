@@ -4,8 +4,8 @@ class RandomController < ApplicationController
   end
 
   def random_these
-    @min = params.fetch("user_min").to_i
-    @max = params.fetch("user_max").to_i
+    @min = params.fetch("user_min").to_f
+    @max = params.fetch("user_max").to_f
     
     @result = rand(@min..@max)
 
